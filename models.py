@@ -7,11 +7,11 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
-from utils import login, ROOT_URL
+from utils import Distant
 
 
 load_dotenv()
-session = login()
+distant = Distant()
 
 
 class ListToCSV:
@@ -51,7 +51,7 @@ class Team:
             'tv': False
         }
 
-        r = session.post(f'{ROOT_URL}/Schedule/CalendarInfos/', data)
+        r = distant.post('/Schedule/CalendarInfos/', data)
         
         try:
             result = r.json()
@@ -193,7 +193,7 @@ class Game:
         return score, result
 
     def get_details(self):
-        r = session.post(f'{ROOT_URL}/Schedule/GameResult/?gameID={self.id}')
+        r = distant.post(f'/Schedule/GameResult/?gameID={self.id}')
         return BeautifulSoup(r.text, 'html.parser')
 
     def get_team_stats(self, details):
