@@ -4,39 +4,24 @@ import os
 import csv
 from datetime import datetime
 
-import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
+from utils import login, ROOT_URL
+
+
 load_dotenv()
-LOGIN = os.environ.get('LOGIN')
-PASSWORD = os.environ.get('PASSWORD')
-ROOT_URL = os.environ.get('ROOT_URL')
-SAVE_FOLDER = os.environ.get('SAVE_FOLDER')
-
-def login():
-    session = requests.Session()
-
-    data = {
-        'login': os.environ.get('LOGIN'),
-        'pwd': os.environ.get('PASSWORD'),
-        'token': ''
-    }
-    session.post(f'{ROOT_URL}/Site/Connect/', data)
-
-    return session
-
 session = login()
 
 
 class ListToCSV:
     @staticmethod
     def to_csv(to_transform, file_name, header_row):
-        dir_path = SAVE_FOLDER
+        dir_path = os.environ.get('SAVE_FOLDER')
         if not os.path.isdir(dir_path):
             os.makedirs(dir_path)
 
-        with open(f'{SAVE_FOLDER}/{file_name}.csv', mode='w') as file:
+        with open(f'{dir_path}/{file_name}.csv', mode='w') as file:
             writer = csv.writer(file, quoting=csv.QUOTE_MINIMAL)
 
             if header_row:
@@ -207,7 +192,7 @@ class Game:
 
         return score, result
 
-    def get_details(self, ):
+    def get_details(self):
         r = session.post(f'{ROOT_URL}/Schedule/GameResult/?gameID={self.id}')
         return BeautifulSoup(r.text, 'html.parser')
 
@@ -273,6 +258,3 @@ class Month:
 
     def __str__(self):
         return f'<Month - {self.name}>'
-
-
-Team('Phoenix', 'Les Sablonneux').to_csv()
