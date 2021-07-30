@@ -109,9 +109,9 @@ class Team:
     def compile_stats(self):
         compiled_stats = {}
         for stat in self.stats:
-            if stat in compiled_stats.keys():
-                compiled_stats[stat.name].succeeded + stat.succeeded
-                compiled_stats[stat.name].attempted + stat.attempted
+            if stat.name in compiled_stats.keys():
+                compiled_stats[stat.name].succeeded += stat.succeeded
+                compiled_stats[stat.name].attempted += stat.attempted
 
             else:
                 compiled_stats[stat.name] = CompiledTeamStat(
@@ -151,10 +151,10 @@ class TeamStat:
     def percentage(self):
         return self.succeeded / self.attempted
 
-    HEADER_ROW = ['succeeded', 'attempted', 'percentage']
+    HEADER_ROW = ['name', 'succeeded', 'attempted', 'percentage']
 
     def to_csv(self):
-        return [self.succeeded, self.attempted, self.percentage()]
+        return [self.name, self.succeeded, self.attempted, self.percentage()]
 
     def __str__(self):
         return f'<TeamStat {self.name} - {round(self.percentage * 100, 2)}%>'
