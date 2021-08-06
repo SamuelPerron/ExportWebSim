@@ -12,4 +12,4 @@ if __name__ == '__main__':
         raise ValueError('Impossible command.')
 
     if command == 'team_game_stats':
-        Team('Phoenix', 'Les Sablonneux').to_csv()
+        Team('Les Sablonneux', 'Phoenix').to_csv()

@@ -1,0 +1,179 @@
+[
+    {
+        "side": "offence",
+        "line": 1,
+        "players": [
+            {
+                "position": "AG",
+                "name": "Smyth"
+            },
+            {
+                "position": "C",
+                "name": "Turgeon"
+            },
+            {
+                "position": "AD",
+                "name": "Sykora"
+            }
+        ],
+        "games_played": [
+            "17/12", "20/12"
+        ]
+    },
+    {
+        "side": "offence",
+        "line": 1,
+        "players": [
+            {
+                "position": "AG",
+                "name": "Smyth"
+            },
+            {
+                "position": "C",
+                "name": "Turgeon"
+            },
+            {
+                "position": "AD",
+                "name": "Perry"
+            }
+        ],
+        "games_played": [
+            "25/12", "26/12", "31/12"
+        ]
+    },
+    {
+        "side": "offence",
+        "line": 2,
+        "players": [
+            {
+                "position": "AG",
+                "name": "Blake"
+            },
+            {
+                "position": "C",
+                "name": "Datsyuk"
+            },
+            {
+                "position": "AD",
+                "name": "Sharp"
+            }
+        ],
+        "games_played": [
+            "17/12", "20/12", "25/12", "26/12", "31/12"
+        ]
+    },
+    {
+        "side": "offence",
+        "line": 3,
+        "players": [
+            {
+                "position": "AG",
+                "name": "Nash"
+            },
+            {
+                "position": "C",
+                "name": "Prospal"
+            },
+            {
+                "position": "AD",
+                "name": "Perry"
+            }
+        ],
+        "games_played": [
+            "17/12", "20/12"
+        ]
+    },
+    {
+        "side": "offence",
+        "line": 3,
+        "players": [
+            {
+                "position": "AG",
+                "name": "Nash"
+            },
+            {
+                "position": "C",
+                "name": "Prospal"
+            },
+            {
+                "position": "AD",
+                "name": "Sykora"
+            }
+        ],
+        "games_played": [
+            "25/12", "26/12", "31/12"
+        ]
+    },
+    {
+        "side": "offence",
+        "line": 4,
+        "players": [
+            {
+                "position": "AG",
+                "name": "Kostitsyn"
+            },
+            {
+                "position": "C",
+                "name": "Staal"
+            },
+            {
+                "position": "AD",
+                "name": "Pominville"
+            }
+        ],
+        "games_played": [
+            "17/12", "20/12", "25/12", "26/12", "31/12"
+        ]
+    },
+    {
+        "side": "defence",
+        "line": 1,
+        "players": [
+            {
+                "position": "D",
+                "name": "Chara"
+            },
+            {
+                "position": "D",
+                "name": "Jovanovski"
+            }
+        ],
+        "games_played": [
+            "17/12", "20/12", "25/12", "26/12", "31/12"
+        ]
+    },
+    {
+        "side": "defence",
+        "line": 2,
+        "players": [
+            {
+                "position": "D",
+                "name": "Niinimaa"
+            },
+            {
+                "position": "D",
+                "name": "Malik"
+            }
+        ],
+        "games_played": [
+            "17/12", "20/12", "25/12", "26/12", "31/12"
+        ]
+    },
+    {
+        "side": "defence",
+        "line": 1,
+        "players": [
+            {
+                "position": "D",
+                "name": "White"
+            },
+            {
+                "position": "D",
+                "name": "Berard"
+            }
+        ],
+        "games_played": [
+            "17/12", "20/12", "25/12", "26/12", "31/12"
+        ]
+    }
+]

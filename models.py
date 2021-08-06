@@ -47,8 +47,8 @@ class Team:
         data = {
             'cid': 39,
             'm': month,
-            's': 0,
-            'tv': False
+            's': "1",
+            'tv': True
         }
 
         r = distant.post('/Schedule/CalendarInfos/', data)
@@ -62,7 +62,7 @@ class Team:
 
     def get_all_months(self, only_if_games=False):
         months = []
-        for i in range(1, 12):
+        for i in range(1, 13):
             month = self.get_calendar_data_for_month(i)
 
             if only_if_games and month:
@@ -156,10 +156,11 @@ class Game:
     WIN = 'win'
     LOSS = 'loss'
 
-    def __init__(self, id, team, opponent, score):
+    def __init__(self, id, date, team, opponent, score):
         self.id = id
         self.team = team
         self.opponent = opponent
+        self.date = date
         self.score, self.result = self.websim_score_to_real(score)
 
         details = self.get_details()
@@ -199,7 +200,7 @@ class Game:
     def get_team_stats(self, details):
         stats = []
         h2 = details.find('h2', string=re.compile(
-            f'Attempted and succeeded plays - {self.team.name}'
+            f'Attempted and succeeded plays - {self.team.city}'
         ))
         table = h2.find_next_siblings()[0]
         trs = table.findChildren('tr', recursive=False)[1:]
@@ -216,11 +217,12 @@ class Game:
 
         return stats
 
-    HEADER_ROW = ['id', 'opponent', 'result', 'score_us', 'score_them']
+    HEADER_ROW = ['id', 'date', 'opponent', 'result', 'score_us', 'score_them']
 
     def to_csv(self):
         return [
             self.id, 
+            self.date,
             self.opponent, 
             self.result, 
             self.score[self.team.city], 
@@ -239,20 +241,33 @@ class Month:
     )
 
     def __init__(self, data, team):
-        month_nb = data['month'] - 1
-        self.name = self.MONTH_NAMES[month_nb]
+        self.month_nb = data['month']
+        month_nb_index = self.month_nb - 1
+        self.name = self.MONTH_NAMES[month_nb_index]
         self.team = team
         self.games = self.get_games_from_month_data(data)
 
     def get_games_from_month_data(self, data):
         games = []
-        for day in data['days']:
+        for day in data['games']:
+
             if day['Simulated']:
+                home_city = day['HomeTeam'].split(' ')[0].lower()
+                visitor_city = day['AwayTeam'].split(' ')[0].lower()
+                self_city = self.team.city.lower()
+
+                opponent = home_city if home_city != self_city else visitor_city
+                self_score = day['HomeGoals'] if home_city == self_city else day['AwayGoals']
+                opponent_score = day['AwayGoals'] if home_city == self_city else day['HomeGoals']
+                game_result = 'W' if self_score > opponent_score else 'L'
+                game_score = f'{self_score}-{opponent_score} {game_result}'
+
                 games.append(Game(
                     day['ID'],
+                    f"{day['GameDay']}/{self.month_nb}",
                     self.team,
-                    day['CityName'],
-                    day['GameDescription'],
+                    opponent,
+                    game_score,
                 ))
         return games
 
