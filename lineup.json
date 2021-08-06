@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "side": "offence",
         "line": 1,
         "players": [
@@ -21,6 +22,7 @@
         ]
     },
     {
+        "id": 2,
         "side": "offence",
         "line": 1,
         "players": [
@@ -42,6 +44,7 @@
         ]
     },
     {
+        "id": 3,
         "side": "offence",
         "line": 2,
         "players": [
@@ -63,6 +66,7 @@
         ]
     },
     {
+        "id": 4,
         "side": "offence",
         "line": 3,
         "players": [
@@ -84,6 +88,7 @@
         ]
     },
     {
+        "id": 5,
         "side": "offence",
         "line": 3,
         "players": [
@@ -105,6 +110,7 @@
         ]
     },
     {
+        "id": 6,
         "side": "offence",
         "line": 4,
         "players": [
@@ -126,6 +132,7 @@
         ]
     },
     {
+        "id": 7,
         "side": "defence",
         "line": 1,
         "players": [
@@ -143,6 +150,7 @@
         ]
     },
     {
+        "id": 8,
         "side": "defence",
         "line": 2,
         "players": [
@@ -160,6 +168,7 @@
         ]
     },
     {
+        "id": 9,
         "side": "defence",
         "line": 1,
         "players": [

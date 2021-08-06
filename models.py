@@ -31,12 +31,57 @@ class ListToCSV:
                 writer.writerow(obj.to_csv())
 
 
+class Player:
+    def __init__(self, line, data):
+        self.line = line
+        self.position = data['position']
+        self.name = data['name']
+
+
+class Line:
+    OFFENCE = 'offence'
+    DEFENCE = 'defence'
+    SIDE_CHOICES = (OFFENCE, DEFENCE)
+
+    def __init__(self, team, data):
+        self.team = team
+        self.id, self.side, self.line, self.players, self.games_played = self.handle_data(data)
+
+        # self.stats = {
+        #     'wins': 0,
+        #     'losses': 0,
+        #     'goals': 0,
+        #     'passes': 0,
+        #     'points': 0,
+        #     'shots': 0,
+        #     'blocked_shots': 0,
+        #     'ratio': 0,
+        #     'checks': 0,
+        # }
+
+    def handle_data(self, data):
+        id = data['id']
+        side = data['side'] if data['side'] in self.SIDE_CHOICES else None
+        line = data['line']
+        players = [Player(self, player) for player in data['players']]
+        games_played = self.get_games_from_dates(data['games_played'])
+
+        return id, side, line, players, games_played
+
+    def get_games_from_dates(self, dates):
+        team_games = self.team.games_by_date
+        games = []
+        for date in dates:
+            if date in team_games.keys():
+                games.append(team_games[date])
+
+
 class Team:
     def __init__(self, name, city):
         self.name = name
         self.city = city
         self.months = self.get_all_months()
-        self.games = self.get_all_games()
+        self.games, self.games_by_date = self.get_all_games()
         self.stats = self.get_all_stats()
         self.compiled_stats = self.compile_stats()
 
@@ -77,9 +122,11 @@ class Team:
 
     def get_all_games(self):
         games = []
+        games_by_date = {}
         for month in self.months:
             for game in month.games:
                 games.append(game)
+                games_by_date[game.date] = game
         
         return games
 
