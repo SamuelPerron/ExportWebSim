@@ -6,20 +6,76 @@
         "players": [
             {
                 "position": "AG",
-                "name": "Smyth"
+                "name": "Smyth",
+                "stats": {
+                    "wins": 0,
+                    "losses": 2,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 5,
+                    "blocked_shots": 3,
+                    "ratio": -6,
+                    "checks": 3,
+                    "penalities": 2,
+                    "mins": 51
+                }
             },
             {
                 "position": "C",
-                "name": "Turgeon"
+                "name": "Turgeon",
+                "stats": {
+                    "wins": 0,
+                    "losses": 2,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 5,
+                    "blocked_shots": 1,
+                    "ratio": -6,
+                    "checks": 2,
+                    "penalities": 0,
+                    "mins": 48
+                }
             },
             {
                 "position": "AD",
-                "name": "Sykora"
+                "name": "Sykora",
+                "stats": {
+                    "wins": 0,
+                    "losses": 2,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 3,
+                    "blocked_shots": 0,
+                    "ratio": -6,
+                    "checks": 1,
+                    "penalities": 2,
+                    "mins": 44
+                }
             }
         ],
         "games_played": [
-            ["17/12", "20/12"]
-        ]
+            [
+                "17/12",
+                "20/12"
+            ]
+        ],
+        "stats": {
+            "wins": 0,
+            "losses": 2,
+            "goals": 0,
+            "passes": 0,
+            "points": 0,
+            "shots": 13,
+            "blocked_shots": 4,
+            "ratio": -18,
+            "checks": 6,
+            "penalities": 4,
+            "mins": 143,
+            "nb_games_played": 2
+        }
     },
     {
         "id": 2,
@@ -28,20 +84,76 @@
         "players": [
             {
                 "position": "AG",
-                "name": "Smyth"
+                "name": "Smyth",
+                "stats": {
+                    "wins": 4,
+                    "losses": 6,
+                    "goals": 0,
+                    "passes": 3,
+                    "points": 3,
+                    "shots": 16,
+                    "blocked_shots": 6,
+                    "ratio": -12,
+                    "checks": 12,
+                    "penalities": 4,
+                    "mins": 255
+                }
             },
             {
                 "position": "C",
-                "name": "Turgeon"
+                "name": "Turgeon",
+                "stats": {
+                    "wins": 4,
+                    "losses": 6,
+                    "goals": 3,
+                    "passes": 5,
+                    "points": 8,
+                    "shots": 26,
+                    "blocked_shots": 11,
+                    "ratio": -12,
+                    "checks": 13,
+                    "penalities": 0,
+                    "mins": 243
+                }
             },
             {
                 "position": "AD",
-                "name": "Perry"
+                "name": "Perry",
+                "stats": {
+                    "wins": 4,
+                    "losses": 6,
+                    "goals": 1,
+                    "passes": 2,
+                    "points": 3,
+                    "shots": 11,
+                    "blocked_shots": 2,
+                    "ratio": -11,
+                    "checks": 7,
+                    "penalities": 0,
+                    "mins": 176
+                }
             }
         ],
         "games_played": [
-            ["25/12", "12/1"]
-        ]
+            [
+                "25/12",
+                "12/1"
+            ]
+        ],
+        "stats": {
+            "wins": 4,
+            "losses": 6,
+            "goals": 4,
+            "passes": 10,
+            "points": 14,
+            "shots": 53,
+            "blocked_shots": 19,
+            "ratio": -35,
+            "checks": 32,
+            "penalities": 4,
+            "mins": 674,
+            "nb_games_played": 10
+        }
     },
     {
         "id": 3,
@@ -50,20 +162,76 @@
         "players": [
             {
                 "position": "AG",
-                "name": "Blake"
+                "name": "Blake",
+                "stats": {
+                    "wins": 4,
+                    "losses": 9,
+                    "goals": 3,
+                    "passes": 9,
+                    "points": 12,
+                    "shots": 31,
+                    "blocked_shots": 4,
+                    "ratio": 5,
+                    "checks": 11,
+                    "penalities": 0,
+                    "mins": 215
+                }
             },
             {
                 "position": "C",
-                "name": "Datsyuk"
+                "name": "Datsyuk",
+                "stats": {
+                    "wins": 4,
+                    "losses": 9,
+                    "goals": 5,
+                    "passes": 4,
+                    "points": 9,
+                    "shots": 42,
+                    "blocked_shots": 3,
+                    "ratio": 5,
+                    "checks": 13,
+                    "penalities": 2,
+                    "mins": 251
+                }
             },
             {
                 "position": "AD",
-                "name": "Sharp"
+                "name": "Sharp",
+                "stats": {
+                    "wins": 4,
+                    "losses": 9,
+                    "goals": 7,
+                    "passes": 9,
+                    "points": 16,
+                    "shots": 36,
+                    "blocked_shots": 2,
+                    "ratio": 5,
+                    "checks": 14,
+                    "penalities": 2,
+                    "mins": 207
+                }
             }
         ],
         "games_played": [
-            ["17/12", "12/1"]
-        ]
+            [
+                "17/12",
+                "12/1"
+            ]
+        ],
+        "stats": {
+            "wins": 4,
+            "losses": 9,
+            "goals": 15,
+            "passes": 22,
+            "points": 37,
+            "shots": 109,
+            "blocked_shots": 9,
+            "ratio": 15,
+            "checks": 38,
+            "penalities": 4,
+            "mins": 673,
+            "nb_games_played": 13
+        }
     },
     {
         "id": 4,
@@ -72,20 +240,76 @@
         "players": [
             {
                 "position": "AG",
-                "name": "Nash"
+                "name": "Nash",
+                "stats": {
+                    "wins": 0,
+                    "losses": 2,
+                    "goals": 0,
+                    "passes": 1,
+                    "points": 1,
+                    "shots": 3,
+                    "blocked_shots": 1,
+                    "ratio": 0,
+                    "checks": 0,
+                    "penalities": 0,
+                    "mins": 18
+                }
             },
             {
                 "position": "C",
-                "name": "Prospal"
+                "name": "Prospal",
+                "stats": {
+                    "wins": 0,
+                    "losses": 2,
+                    "goals": 1,
+                    "passes": 1,
+                    "points": 2,
+                    "shots": 4,
+                    "blocked_shots": 2,
+                    "ratio": 0,
+                    "checks": 0,
+                    "penalities": 0,
+                    "mins": 18
+                }
             },
             {
                 "position": "AD",
-                "name": "Perry"
+                "name": "Perry",
+                "stats": {
+                    "wins": 0,
+                    "losses": 2,
+                    "goals": 2,
+                    "passes": 1,
+                    "points": 3,
+                    "shots": 5,
+                    "blocked_shots": 0,
+                    "ratio": 0,
+                    "checks": 1,
+                    "penalities": 0,
+                    "mins": 18
+                }
             }
         ],
         "games_played": [
-            ["17/12", "20/12"]
-        ]
+            [
+                "17/12",
+                "20/12"
+            ]
+        ],
+        "stats": {
+            "wins": 0,
+            "losses": 2,
+            "goals": 3,
+            "passes": 3,
+            "points": 6,
+            "shots": 12,
+            "blocked_shots": 3,
+            "ratio": 0,
+            "checks": 1,
+            "penalities": 0,
+            "mins": 54,
+            "nb_games_played": 2
+        }
     },
     {
         "id": 5,
@@ -94,20 +318,76 @@
         "players": [
             {
                 "position": "AG",
-                "name": "Nash"
+                "name": "Nash",
+                "stats": {
+                    "wins": 4,
+                    "losses": 6,
+                    "goals": 1,
+                    "passes": 4,
+                    "points": 5,
+                    "shots": 18,
+                    "blocked_shots": 4,
+                    "ratio": 0,
+                    "checks": 10,
+                    "penalities": 0,
+                    "mins": 97
+                }
             },
             {
                 "position": "C",
-                "name": "Prospal"
+                "name": "Prospal",
+                "stats": {
+                    "wins": 4,
+                    "losses": 6,
+                    "goals": 3,
+                    "passes": 1,
+                    "points": 4,
+                    "shots": 17,
+                    "blocked_shots": 4,
+                    "ratio": 0,
+                    "checks": 8,
+                    "penalities": 0,
+                    "mins": 99
+                }
             },
             {
                 "position": "AD",
-                "name": "Sykora"
+                "name": "Sykora",
+                "stats": {
+                    "wins": 4,
+                    "losses": 6,
+                    "goals": 4,
+                    "passes": 4,
+                    "points": 8,
+                    "shots": 20,
+                    "blocked_shots": 2,
+                    "ratio": -1,
+                    "checks": 8,
+                    "penalities": 2,
+                    "mins": 133
+                }
             }
         ],
         "games_played": [
-            ["25/12", "12/1"]
-        ]
+            [
+                "25/12",
+                "12/1"
+            ]
+        ],
+        "stats": {
+            "wins": 4,
+            "losses": 6,
+            "goals": 8,
+            "passes": 9,
+            "points": 17,
+            "shots": 55,
+            "blocked_shots": 10,
+            "ratio": -1,
+            "checks": 26,
+            "penalities": 2,
+            "mins": 329,
+            "nb_games_played": 10
+        }
     },
     {
         "id": 6,
@@ -116,20 +396,76 @@
         "players": [
             {
                 "position": "AG",
-                "name": "Kostitsyn"
+                "name": "Kostitsyn",
+                "stats": {
+                    "wins": 4,
+                    "losses": 9,
+                    "goals": 2,
+                    "passes": 0,
+                    "points": 2,
+                    "shots": 12,
+                    "blocked_shots": 3,
+                    "ratio": -4,
+                    "checks": 13,
+                    "penalities": 0,
+                    "mins": 90
+                }
             },
             {
                 "position": "C",
-                "name": "Staal"
+                "name": "Staal",
+                "stats": {
+                    "wins": 4,
+                    "losses": 9,
+                    "goals": 1,
+                    "passes": 3,
+                    "points": 4,
+                    "shots": 7,
+                    "blocked_shots": 5,
+                    "ratio": -4,
+                    "checks": 7,
+                    "penalities": 2,
+                    "mins": 88
+                }
             },
             {
                 "position": "AD",
-                "name": "Pominville"
+                "name": "Pominville",
+                "stats": {
+                    "wins": 4,
+                    "losses": 9,
+                    "goals": 0,
+                    "passes": 1,
+                    "points": 1,
+                    "shots": 7,
+                    "blocked_shots": 2,
+                    "ratio": -4,
+                    "checks": 4,
+                    "penalities": 2,
+                    "mins": 90
+                }
             }
         ],
         "games_played": [
-            ["17/12", "12/1"]
-        ]
+            [
+                "17/12",
+                "12/1"
+            ]
+        ],
+        "stats": {
+            "wins": 4,
+            "losses": 9,
+            "goals": 3,
+            "passes": 4,
+            "points": 7,
+            "shots": 26,
+            "blocked_shots": 10,
+            "ratio": -12,
+            "checks": 24,
+            "penalities": 4,
+            "mins": 268,
+            "nb_games_played": 13
+        }
     },
     {
         "id": 7,
@@ -138,16 +474,58 @@
         "players": [
             {
                 "position": "D",
-                "name": "Chara"
+                "name": "Chara",
+                "stats": {
+                    "wins": 5,
+                    "losses": 10,
+                    "goals": 1,
+                    "passes": 2,
+                    "points": 3,
+                    "shots": 20,
+                    "blocked_shots": 16,
+                    "ratio": -8,
+                    "checks": 61,
+                    "penalities": 14,
+                    "mins": 343
+                }
             },
             {
                 "position": "D",
-                "name": "Jovanovski"
+                "name": "Jovanovski",
+                "stats": {
+                    "wins": 5,
+                    "losses": 10,
+                    "goals": 3,
+                    "passes": 6,
+                    "points": 9,
+                    "shots": 25,
+                    "blocked_shots": 15,
+                    "ratio": -9,
+                    "checks": 60,
+                    "penalities": 10,
+                    "mins": 356
+                }
             }
         ],
         "games_played": [
-            ["17/12"]
-        ]
+            [
+                "17/12"
+            ]
+        ],
+        "stats": {
+            "wins": 5,
+            "losses": 10,
+            "goals": 4,
+            "passes": 8,
+            "points": 12,
+            "shots": 45,
+            "blocked_shots": 31,
+            "ratio": -17,
+            "checks": 121,
+            "penalities": 24,
+            "mins": 699,
+            "nb_games_played": 15
+        }
     },
     {
         "id": 8,
@@ -156,16 +534,59 @@
         "players": [
             {
                 "position": "D",
-                "name": "Niinimaa"
+                "name": "Niinimaa",
+                "stats": {
+                    "wins": 4,
+                    "losses": 9,
+                    "goals": 1,
+                    "passes": 7,
+                    "points": 8,
+                    "shots": 18,
+                    "blocked_shots": 14,
+                    "ratio": -11,
+                    "checks": 44,
+                    "penalities": 9,
+                    "mins": 276
+                }
             },
             {
                 "position": "D",
-                "name": "Malik"
+                "name": "Malik",
+                "stats": {
+                    "wins": 4,
+                    "losses": 9,
+                    "goals": 1,
+                    "passes": 2,
+                    "points": 3,
+                    "shots": 8,
+                    "blocked_shots": 17,
+                    "ratio": -9,
+                    "checks": 35,
+                    "penalities": 14,
+                    "mins": 234
+                }
             }
         ],
         "games_played": [
-            ["17/12", "12/1"]
-        ]
+            [
+                "17/12",
+                "12/1"
+            ]
+        ],
+        "stats": {
+            "wins": 4,
+            "losses": 9,
+            "goals": 2,
+            "passes": 9,
+            "points": 11,
+            "shots": 26,
+            "blocked_shots": 31,
+            "ratio": -20,
+            "checks": 79,
+            "penalities": 23,
+            "mins": 510,
+            "nb_games_played": 13
+        }
     },
     {
         "id": 9,
@@ -174,16 +595,59 @@
         "players": [
             {
                 "position": "D",
-                "name": "White"
+                "name": "White",
+                "stats": {
+                    "wins": 4,
+                    "losses": 9,
+                    "goals": 1,
+                    "passes": 4,
+                    "points": 5,
+                    "shots": 10,
+                    "blocked_shots": 14,
+                    "ratio": 1,
+                    "checks": 10,
+                    "penalities": 4,
+                    "mins": 194
+                }
             },
             {
                 "position": "D",
-                "name": "Berard"
+                "name": "Berard",
+                "stats": {
+                    "wins": 4,
+                    "losses": 9,
+                    "goals": 4,
+                    "passes": 7,
+                    "points": 11,
+                    "shots": 18,
+                    "blocked_shots": 9,
+                    "ratio": 0,
+                    "checks": 23,
+                    "penalities": 10,
+                    "mins": 249
+                }
             }
         ],
         "games_played": [
-            ["17/12", "12/1"]
-        ]
+            [
+                "17/12",
+                "12/1"
+            ]
+        ],
+        "stats": {
+            "wins": 4,
+            "losses": 9,
+            "goals": 5,
+            "passes": 11,
+            "points": 16,
+            "shots": 28,
+            "blocked_shots": 23,
+            "ratio": 1,
+            "checks": 33,
+            "penalities": 14,
+            "mins": 443,
+            "nb_games_played": 13
+        }
     },
     {
         "id": 10,
@@ -192,20 +656,75 @@
         "players": [
             {
                 "position": "AG",
-                "name": "Smyth"
+                "name": "Smyth",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 1,
+                    "passes": 1,
+                    "points": 2,
+                    "shots": 1,
+                    "blocked_shots": 1,
+                    "ratio": -1,
+                    "checks": 1,
+                    "penalities": 2,
+                    "mins": 45
+                }
             },
             {
                 "position": "C",
-                "name": "Datsyuk"
+                "name": "Datsyuk",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 2,
+                    "points": 2,
+                    "shots": 1,
+                    "blocked_shots": 3,
+                    "ratio": 0,
+                    "checks": 2,
+                    "penalities": 2,
+                    "mins": 41
+                }
             },
             {
                 "position": "AD",
-                "name": "Perry"
+                "name": "Perry",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 1,
+                    "points": 1,
+                    "shots": 4,
+                    "blocked_shots": 0,
+                    "ratio": 0,
+                    "checks": 0,
+                    "penalities": 0,
+                    "mins": 33
+                }
             }
         ],
         "games_played": [
-            ["13/1"]
-        ]
+            [
+                "13/1"
+            ]
+        ],
+        "stats": {
+            "wins": 1,
+            "losses": 1,
+            "goals": 1,
+            "passes": 4,
+            "points": 5,
+            "shots": 6,
+            "blocked_shots": 4,
+            "ratio": -1,
+            "checks": 3,
+            "penalities": 4,
+            "mins": 119,
+            "nb_games_played": 2
+        }
     },
     {
         "id": 11,
@@ -214,20 +733,75 @@
         "players": [
             {
                 "position": "AG",
-                "name": "Blake"
+                "name": "Blake",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 2,
+                    "blocked_shots": 0,
+                    "ratio": 0,
+                    "checks": 1,
+                    "penalities": 2,
+                    "mins": 34
+                }
             },
             {
                 "position": "C",
-                "name": "Prospal"
+                "name": "Prospal",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 3,
+                    "blocked_shots": 0,
+                    "ratio": 0,
+                    "checks": 2,
+                    "penalities": 0,
+                    "mins": 30
+                }
             },
             {
                 "position": "AD",
-                "name": "Sykora"
+                "name": "Sykora",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 2,
+                    "blocked_shots": 2,
+                    "ratio": -1,
+                    "checks": 1,
+                    "penalities": 0,
+                    "mins": 37
+                }
             }
         ],
         "games_played": [
-            ["13/1"]
-        ]
+            [
+                "13/1"
+            ]
+        ],
+        "stats": {
+            "wins": 1,
+            "losses": 1,
+            "goals": 0,
+            "passes": 0,
+            "points": 0,
+            "shots": 7,
+            "blocked_shots": 2,
+            "ratio": -1,
+            "checks": 4,
+            "penalities": 2,
+            "mins": 101,
+            "nb_games_played": 2
+        }
     },
     {
         "id": 12,
@@ -236,20 +810,75 @@
         "players": [
             {
                 "position": "AG",
-                "name": "Nash"
+                "name": "Nash",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 0,
+                    "blocked_shots": 1,
+                    "ratio": 1,
+                    "checks": 1,
+                    "penalities": 0,
+                    "mins": 23
+                }
             },
             {
                 "position": "C",
-                "name": "Staal"
+                "name": "Staal",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 1,
+                    "passes": 0,
+                    "points": 1,
+                    "shots": 4,
+                    "blocked_shots": 0,
+                    "ratio": 0,
+                    "checks": 0,
+                    "penalities": 2,
+                    "mins": 17
+                }
             },
             {
                 "position": "AD",
-                "name": "Pominville"
+                "name": "Pominville",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 1,
+                    "points": 1,
+                    "shots": 1,
+                    "blocked_shots": 1,
+                    "ratio": 1,
+                    "checks": 1,
+                    "penalities": 0,
+                    "mins": 25
+                }
             }
         ],
         "games_played": [
-            ["13/1"]
-        ]
+            [
+                "13/1"
+            ]
+        ],
+        "stats": {
+            "wins": 1,
+            "losses": 1,
+            "goals": 1,
+            "passes": 1,
+            "points": 2,
+            "shots": 5,
+            "blocked_shots": 2,
+            "ratio": 2,
+            "checks": 2,
+            "penalities": 2,
+            "mins": 65,
+            "nb_games_played": 2
+        }
     },
     {
         "id": 13,
@@ -258,20 +887,75 @@
         "players": [
             {
                 "position": "AG",
-                "name": "Kostitsyn"
+                "name": "Kostitsyn",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 1,
+                    "blocked_shots": 0,
+                    "ratio": -1,
+                    "checks": 0,
+                    "penalities": 0,
+                    "mins": 15
+                }
             },
             {
                 "position": "C",
-                "name": "Bouchard"
+                "name": "Bouchard",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 1,
+                    "points": 1,
+                    "shots": 1,
+                    "blocked_shots": 0,
+                    "ratio": 0,
+                    "checks": 2,
+                    "penalities": 0,
+                    "mins": 7
+                }
             },
             {
                 "position": "AD",
-                "name": "Horton"
+                "name": "Horton",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 1,
+                    "points": 1,
+                    "shots": 3,
+                    "blocked_shots": 0,
+                    "ratio": -1,
+                    "checks": 1,
+                    "penalities": 0,
+                    "mins": 14
+                }
             }
         ],
         "games_played": [
-            ["13/1"]
-        ]
+            [
+                "13/1"
+            ]
+        ],
+        "stats": {
+            "wins": 1,
+            "losses": 1,
+            "goals": 0,
+            "passes": 2,
+            "points": 2,
+            "shots": 5,
+            "blocked_shots": 0,
+            "ratio": -2,
+            "checks": 3,
+            "penalities": 0,
+            "mins": 36,
+            "nb_games_played": 2
+        }
     },
     {
         "id": 14,
@@ -280,16 +964,58 @@
         "players": [
             {
                 "position": "D",
-                "name": "Johnsson"
+                "name": "Johnsson",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 4,
+                    "blocked_shots": 2,
+                    "ratio": 1,
+                    "checks": 3,
+                    "penalities": 0,
+                    "mins": 39
+                }
             },
             {
                 "position": "D",
-                "name": "Berard"
+                "name": "Berard",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 1,
+                    "blocked_shots": 4,
+                    "ratio": -1,
+                    "checks": 5,
+                    "penalities": 0,
+                    "mins": 43
+                }
             }
         ],
         "games_played": [
-            ["13/1"]
-        ]
+            [
+                "13/1"
+            ]
+        ],
+        "stats": {
+            "wins": 1,
+            "losses": 1,
+            "goals": 0,
+            "passes": 0,
+            "points": 0,
+            "shots": 5,
+            "blocked_shots": 6,
+            "ratio": 0,
+            "checks": 8,
+            "penalities": 0,
+            "mins": 82,
+            "nb_games_played": 2
+        }
     },
     {
         "id": 15,
@@ -298,15 +1024,57 @@
         "players": [
             {
                 "position": "D",
-                "name": "White"
+                "name": "White",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 2,
+                    "blocked_shots": 0,
+                    "ratio": 1,
+                    "checks": 3,
+                    "penalities": 0,
+                    "mins": 30
+                }
             },
             {
                 "position": "D",
-                "name": "Malik"
+                "name": "Malik",
+                "stats": {
+                    "wins": 1,
+                    "losses": 1,
+                    "goals": 0,
+                    "passes": 0,
+                    "points": 0,
+                    "shots": 2,
+                    "blocked_shots": 1,
+                    "ratio": 1,
+                    "checks": 4,
+                    "penalities": 0,
+                    "mins": 31
+                }
             }
         ],
         "games_played": [
-            ["13/1"]
-        ]
+            [
+                "13/1"
+            ]
+        ],
+        "stats": {
+            "wins": 1,
+            "losses": 1,
+            "goals": 0,
+            "passes": 0,
+            "points": 0,
+            "shots": 4,
+            "blocked_shots": 1,
+            "ratio": 2,
+            "checks": 7,
+            "penalities": 0,
+            "mins": 61,
+            "nb_games_played": 2
+        }
     }
 ]

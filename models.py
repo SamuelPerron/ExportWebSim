@@ -108,17 +108,31 @@ class Line:
         for date_group in dates_groups:
             start_date = datetime.strptime(date_group[0], '%d/%m')
 
+            if start_date.month < 9:
+                start_date = start_date.replace(year=start_date.year + 1)
+
             try:
                 end_date = datetime.strptime(date_group[1], '%d/%m')
+
+                if end_date.month < 9:
+                    end_date = end_date.replace(year=end_date.year + 1)
             except IndexError:
-                end_date = datetime.now()
+                end_date = None
 
             for date in team_games.keys():
                 original_date = date
                 date = datetime.strptime(date, '%d/%m')
+
+                if date.month < 9:
+                    date = date.replace(year=date.year + 1)
                 
-                if date >= start_date and date <= end_date:
-                    games.append(team_games[original_date])
+                if date >= start_date:
+                    if end_date:
+                        if date <= end_date:
+                            games.append(team_games[original_date])
+
+                    else:
+                        games.append(team_games[original_date])
 
         return games
 
@@ -136,8 +150,30 @@ class Line:
 
         stats['wins'] = self.players[0].stats['wins']
         stats['losses'] = self.players[0].stats['losses']
+        stats['nb_games_played'] = len(self.games_played)
 
         return stats
+
+    def get_player_by_name(self, name):
+        for player in self.players:
+            if player.name == name:
+                return player
+
+    def save_to_json(self):
+        with open(self.LINEUP_FILE, 'r', encoding='utf-8') as file:
+            lines = json.load(file)
+
+            for line in lines:
+                if line['id'] == self.id:
+                    line['stats'] = self.stats
+
+                    for player in line['players']:
+                        player_obj = self.get_player_by_name(player['name'])
+                        player['stats'] = player_obj.stats
+            
+        with open(self.LINEUP_FILE, 'w', encoding='utf-8') as file:
+            dump = json.dumps(lines, indent=4)
+            file.write(dump)
 
 
 class Team:
