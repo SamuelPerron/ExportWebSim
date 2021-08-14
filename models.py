@@ -36,7 +36,55 @@ class Player:
         self.line = line
         self.position = data['position']
         self.name = data['name']
+        self.stats = self.compile_stats()
+        raise Exception(self.stats)
 
+    def compile_stats(self):
+        stats = {
+            'wins': 0,
+            'losses': 0,
+            'goals': 0,
+            'passes': 0,
+            'points': 0,
+            'shots': 0,
+            'blocked_shots': 0,
+            'ratio': 0,
+            'checks': 0,
+            'penalities': 0,
+            'mins': 0
+        }
+
+        games = self.line.games_played
+        team = self.line.team
+        for game in games:
+            if game.result == Game.WIN:
+                stats['wins'] += 1
+
+            elif game.result == Game.LOSS:
+                stats['losses'] += 1
+
+            details = game.get_details()
+            h2 = details.find(
+                'h2', 
+                string=re.compile(f'Players - {team.city} {team.name}')
+            )
+            table = h2.find_next_siblings()[0]
+            trs = table.findChildren('tr', recursive=False)[1:]
+
+            for tr in trs:
+                tds = tr.findChildren('td', recursive=False)
+                if self.name.upper() in str(tds[0]):
+                    stats['goals'] += int(tds[1].string)
+                    stats['passes'] += int(tds[2].string)
+                    stats['points'] += int(tds[3].string)
+                    stats['shots'] += int(tds[4].string)
+                    stats['blocked_shots'] += int(tds[10].string)
+                    stats['ratio'] += int(tds[5].string)
+                    stats['checks'] += int(tds[6].string)
+                    stats['penalities'] += int(tds[7].string)
+                    stats['mins'] += int(tds[8].string)
+
+        return stats
 
 class Line:
     OFFENCE = 'offence'
@@ -45,35 +93,31 @@ class Line:
 
     def __init__(self, team, data):
         self.team = team
-        self.id, self.side, self.line, self.players, self.games_played = self.handle_data(data)
+        self.id = data['id']
+        self.side = data['side'] if data['side'] in self.SIDE_CHOICES else None
+        self.line = data['line']
+        self.games_played = self.get_games_from_dates(data['games_played'])
+        self.players = [Player(self, player) for player in data['players']]
 
-        # self.stats = {
-        #     'wins': 0,
-        #     'losses': 0,
-        #     'goals': 0,
-        #     'passes': 0,
-        #     'points': 0,
-        #     'shots': 0,
-        #     'blocked_shots': 0,
-        #     'ratio': 0,
-        #     'checks': 0,
-        # }
-
-    def handle_data(self, data):
-        id = data['id']
-        side = data['side'] if data['side'] in self.SIDE_CHOICES else None
-        line = data['line']
-        players = [Player(self, player) for player in data['players']]
-        games_played = self.get_games_from_dates(data['games_played'])
-
-        return id, side, line, players, games_played
-
-    def get_games_from_dates(self, dates):
+    def get_games_from_dates(self, dates_groups):
         team_games = self.team.games_by_date
         games = []
-        for date in dates:
-            if date in team_games.keys():
-                games.append(team_games[date])
+        for date_group in dates_groups:
+            start_date = datetime.strptime(date_group[0], '%d/%m')
+
+            try:
+                end_date = datetime.strptime(date_group[1], '%d/%m')
+            except IndexError:
+                end_date = datetime.now()
+
+            for date in team_games.keys():
+                original_date = date
+                date = datetime.strptime(date, '%d/%m')
+                
+                if date >= start_date and date <= end_date:
+                    games.append(team_games[original_date])
+
+        return games
 
 
 class Team:
@@ -82,8 +126,20 @@ class Team:
         self.city = city
         self.months = self.get_all_months()
         self.games, self.games_by_date = self.get_all_games()
+        self.lines = self.get_all_lines()
         self.stats = self.get_all_stats()
         self.compiled_stats = self.compile_stats()
+
+    def get_all_lines(self):
+        with open('lineup.json') as file:
+            data = json.load(file)
+            lines = []
+            for line in data:
+                lines.append(
+                    Line(self, line)
+                )
+
+            return lines
 
     def get_calendar_data_for_month(self, month=0):
         # If the month is '0', then we get sent back the current month
@@ -128,7 +184,7 @@ class Team:
                 games.append(game)
                 games_by_date[game.date] = game
         
-        return games
+        return games, games_by_date
 
     def get_all_stats(self):
         stats = []

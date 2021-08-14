@@ -18,7 +18,7 @@
             }
         ],
         "games_played": [
-            "17/12", "20/12"
+            ["17/12", "20/12"]
         ]
     },
     {
@@ -40,7 +40,7 @@
             }
         ],
         "games_played": [
-            "25/12", "26/12", "31/12"
+            ["25/12", "12/1"]
         ]
     },
     {
@@ -62,7 +62,7 @@
             }
         ],
         "games_played": [
-            "17/12", "20/12", "25/12", "26/12", "31/12"
+            ["17/12", "12/1"]
         ]
     },
     {
@@ -84,7 +84,7 @@
             }
         ],
         "games_played": [
-            "17/12", "20/12"
+            ["17/12", "20/12"]
         ]
     },
     {
@@ -106,7 +106,7 @@
             }
         ],
         "games_played": [
-            "25/12", "26/12", "31/12"
+            ["25/12", "12/1"]
         ]
     },
     {
@@ -128,7 +128,7 @@
             }
         ],
         "games_played": [
-            "17/12", "20/12", "25/12", "26/12", "31/12"
+            ["17/12", "12/1"]
         ]
     },
     {
@@ -146,7 +146,7 @@
             }
         ],
         "games_played": [
-            "17/12", "20/12", "25/12", "26/12", "31/12"
+            ["17/12"]
         ]
     },
     {
@@ -164,7 +164,7 @@
             }
         ],
         "games_played": [
-            "17/12", "20/12", "25/12", "26/12", "31/12"
+            ["17/12", "12/1"]
         ]
     },
     {
@@ -182,7 +182,131 @@
             }
         ],
         "games_played": [
-            "17/12", "20/12", "25/12", "26/12", "31/12"
+            ["17/12", "12/1"]
+        ]
+    },
+    {
+        "id": 10,
+        "side": "offence",
+        "line": 1,
+        "players": [
+            {
+                "position": "AG",
+                "name": "Smyth"
+            },
+            {
+                "position": "C",
+                "name": "Datsyuk"
+            },
+            {
+                "position": "AD",
+                "name": "Perry"
+            }
+        ],
+        "games_played": [
+            ["13/1"]
+        ]
+    },
+    {
+        "id": 11,
+        "side": "offence",
+        "line": 2,
+        "players": [
+            {
+                "position": "AG",
+                "name": "Blake"
+            },
+            {
+                "position": "C",
+                "name": "Prospal"
+            },
+            {
+                "position": "AD",
+                "name": "Sykora"
+            }
+        ],
+        "games_played": [
+            ["13/1"]
+        ]
+    },
+    {
+        "id": 12,
+        "side": "offence",
+        "line": 3,
+        "players": [
+            {
+                "position": "AG",
+                "name": "Nash"
+            },
+            {
+                "position": "C",
+                "name": "Staal"
+            },
+            {
+                "position": "AD",
+                "name": "Pominville"
+            }
+        ],
+        "games_played": [
+            ["13/1"]
+        ]
+    },
+    {
+        "id": 13,
+        "side": "offence",
+        "line": 4,
+        "players": [
+            {
+                "position": "AG",
+                "name": "Kostitsyn"
+            },
+            {
+                "position": "C",
+                "name": "Bouchard"
+            },
+            {
+                "position": "AD",
+                "name": "Horton"
+            }
+        ],
+        "games_played": [
+            ["13/1"]
+        ]
+    },
+    {
+        "id": 14,
+        "side": "defence",
+        "line": 2,
+        "players": [
+            {
+                "position": "D",
+                "name": "Johnsson"
+            },
+            {
+                "position": "D",
+                "name": "Berard"
+            }
+        ],
+        "games_played": [
+            ["13/1"]
+        ]
+    },
+    {
+        "id": 15,
+        "side": "defence",
+        "line": 3,
+        "players": [
+            {
+                "position": "D",
+                "name": "White"
+            },
+            {
+                "position": "D",
+                "name": "Malik"
+            }
+        ],
+        "games_played": [
+            ["13/1"]
         ]
     }
 ]
