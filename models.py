@@ -37,7 +37,6 @@ class Player:
         self.position = data['position']
         self.name = data['name']
         self.stats = self.compile_stats()
-        raise Exception(self.stats)
 
     def compile_stats(self):
         stats = {
@@ -57,10 +56,10 @@ class Player:
         games = self.line.games_played
         team = self.line.team
         for game in games:
-            if game.result == Game.WIN:
+            if game.result == game.WIN:
                 stats['wins'] += 1
 
-            elif game.result == Game.LOSS:
+            elif game.result == game.LOSS:
                 stats['losses'] += 1
 
             details = game.get_details()
@@ -90,6 +89,7 @@ class Line:
     OFFENCE = 'offence'
     DEFENCE = 'defence'
     SIDE_CHOICES = (OFFENCE, DEFENCE)
+    LINEUP_FILE = 'lineup.json'
 
     def __init__(self, team, data):
         self.team = team
@@ -98,6 +98,9 @@ class Line:
         self.line = data['line']
         self.games_played = self.get_games_from_dates(data['games_played'])
         self.players = [Player(self, player) for player in data['players']]
+        self.stats = self.compile_stats()
+
+        self.save_to_json()
 
     def get_games_from_dates(self, dates_groups):
         team_games = self.team.games_by_date
@@ -119,6 +122,23 @@ class Line:
 
         return games
 
+    def compile_stats(self):
+        stats = {}
+
+        for player in self.players:
+            player_stats = player.stats
+
+            for stat in player_stats.keys():
+                if stat not in stats.keys():
+                    stats[stat] = 0
+
+                stats[stat] += player_stats[stat]
+
+        stats['wins'] = self.players[0].stats['wins']
+        stats['losses'] = self.players[0].stats['losses']
+
+        return stats
+
 
 class Team:
     def __init__(self, name, city):
@@ -131,7 +151,7 @@ class Team:
         self.compiled_stats = self.compile_stats()
 
     def get_all_lines(self):
-        with open('lineup.json') as file:
+        with open(Line.LINEUP_FILE) as file:
             data = json.load(file)
             lines = []
             for line in data:
