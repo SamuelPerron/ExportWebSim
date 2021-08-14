@@ -6,3 +6,12 @@ python-dotenv==0.19.0
 requests==2.26.0
 soupsieve==2.2.1
 urllib3==1.26.6
+
+flask
+redis
+Flask-SQLAlchemy
+Flask-Migrate
+sqlalchemy-json
+flask-cors
+psycopg2
+sqlalchemy-utils
